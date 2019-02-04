@@ -3,24 +3,8 @@ Let's make a game!
   desc:Run a successful hosting company!
 
 Layout
-  *main
-    contains:res, buttons
-    *res
-      contains:Resources
-      class:fullWidth
-    *buttons
-      contains:Buttons
-  *store
-    contains:buildings, upgrades
-    *buildings
-      contains:BulkDisplay, Buildings
-      header:Staff
-      tooltip origin:left
-      costs:show
-    *upgrades
-      contains:Upgrades
-      header:Upgrades
-      costs:show
+  use default
+  costs:show
 
 Resources
   *ticket
