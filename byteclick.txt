@@ -16,11 +16,11 @@ Layout
       contains:BulkDisplay, Buildings
       header:Staff
       tooltip origin:left
-            costs:show
+      costs:show
     *upgrades
       contains:Upgrades
       header:Upgrades
-            costs:show
+      costs:show
 
 Resources
   *ticket
