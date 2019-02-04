@@ -37,7 +37,7 @@ Buildings
   name:Support Office
   desc:An office to house a support team member
   on tick:yield 1 ticket
-  cost:100 ticket
+  cost:10 ticket
 
 Upgrades
   *ticketresolution
