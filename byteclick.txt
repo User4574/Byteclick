@@ -2,6 +2,10 @@ Let's make a game!
   name:Byteclick
   desc:Run a successful hosting company!
 
+Layout
+  use default
+  costs:show
+
 Resources
   *ticket
   name:Support Ticket
@@ -21,6 +25,7 @@ Buttons
   *resolveticket
   name:Resolve Ticket
   desc:Resolve a ticket.
+  hidden
   req:ticketresolution
   on click:
     lose 1 ticket
@@ -32,7 +37,7 @@ Buildings
   name:Support Office
   desc:An office to house a support team member
   on tick:yield 1 ticket
-  cost:100 tickets
+  cost:100 ticket
 
 Upgrades
   *ticketresolution
