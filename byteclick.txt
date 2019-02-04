@@ -1,0 +1,14 @@
+Let's make a game!
+	name:Byteclick
+	desc:Run a successful hosting company!
+
+Resources
+	*ticket
+	name:Support Ticket
+	desc:A support ticket
+
+Buttons
+	*replyticket
+	name:Reply to Ticket
+	desc:Send the customer a reply
+	on click:yield 1 ticket
