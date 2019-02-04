@@ -1,14 +1,41 @@
 Let's make a game!
-	name:Byteclick
-	desc:Run a successful hosting company!
+  name:Byteclick
+  desc:Run a successful hosting company!
 
 Resources
-	*ticket
-	name:Support Ticket
-	desc:A support ticket
+  *ticket
+  name:Support Ticket
+  desc:A support ticket
+
+  *resolvedticket
+  name:Resolved Support Ticket
+  desc:A problem solved
+  req:ticketresolution
 
 Buttons
-	*replyticket
-	name:Reply to Ticket
-	desc:Send the customer a reply
-	on click:yield 1 ticket
+  *replyticket
+  name:Reply to Ticket
+  desc:Send the customer a reply
+  on click:yield 1 ticket
+
+  *resolveticket
+  name:Resolve Ticket
+  desc:Resolve a ticket.
+  req:ticketresolution
+  on click:
+    lose 1 ticket
+    yield 1 resolvedticket
+  end
+
+Buildings
+  *office
+  name:Support Office
+  desc:An office to house a support team member
+  on tick:yield 1 ticket
+  cost:100 tickets
+
+Upgrades
+  *ticketresolution
+  name:Ticket Resolution
+  desc:Allows you to resolve tickets, solving problems! (Actual solution not included)
+  req:1000 ticket:earned
