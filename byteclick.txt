@@ -3,7 +3,6 @@ Let's make a game!
   desc:Run a successful hosting company!
 
 Layout
-  costs:show
   *main
     contains:res, buttons
     *res
@@ -17,9 +16,11 @@ Layout
       contains:BulkDisplay, Buildings
       header:Staff
       tooltip origin:left
+            costs:show
     *upgrades
       contains:Upgrades
       header:Upgrades
+            costs:show
 
 Resources
   *ticket
