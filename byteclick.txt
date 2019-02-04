@@ -3,8 +3,23 @@ Let's make a game!
   desc:Run a successful hosting company!
 
 Layout
-  use default
   costs:show
+  *main
+    contains:res, buttons
+    *res
+      contains:Resources
+      class:fullWidth
+    *buttons
+      contains:Buttons
+  *store
+    contains:buildings, upgrades
+    *buildings
+      contains:BulkDisplay, Buildings
+      header:Staff
+      tooltip origin:left
+    *upgrades
+      contains:Upgrades
+      header:Upgrades
 
 Resources
   *ticket
