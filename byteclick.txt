@@ -20,7 +20,13 @@ Buttons
   *replyticket
   name:Reply to Ticket
   desc:Send the customer a reply
-  on click:yield 1 ticket
+  on click:
+    if (have multitasking)
+      yield 3 ticket
+    else
+      yield 1 ticket
+    end
+  end
 
 Buildings
   *office
@@ -37,8 +43,8 @@ Buildings
     yield 1 resolvedticket
   end
   req:ticketresolution
-  cost:40 ticket
-  cost increase:100%
+  cost:100 ticket
+  cost increase:200%
 
 Upgrades
   *ticketresolution
@@ -46,3 +52,25 @@ Upgrades
   desc:Allows you to resolve tickets, solving problems! (Actual solution not included)
   req:1000 ticket:earned
   cost:1000 ticket
+
+  *multitasking
+  name:Multitasking
+  desc:Emails and phone calls at the same time; more than twice as efficient!
+  req:2500 ticket:earned
+  cost:2500 ticket
+
+Shinies
+  *queueattack
+  name:Attack queue
+  on click:
+    $num = (random(100,1000))
+    yield $num ticket
+    if (have ticketresolution)
+      $res = (random(0,$num))
+      lose $res ticket
+      yield $res resolvedticket
+    end
+  end
+  movement:anywhere shrink random
+  frequency:120
+  frequency variation:60
