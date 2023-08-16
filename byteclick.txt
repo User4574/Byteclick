@@ -71,6 +71,6 @@ Shinies
       yield $res resolvedticket
     end
   end
-  movement:anywhere shrink random
+  movement:anywhere shrink moveRandom
   frequency:120
   frequency variation:60
