@@ -63,10 +63,10 @@ Shinies
   *queueattack
   name:Attack queue
   on click:
-    $num = (random(100,1000))
+    $num is random(100,1000)
     yield $num ticket
     if (have ticketresolution)
-      $res = (random(0,$num))
+      $res is random(0,$num)
       lose $res ticket
       yield $res resolvedticket
     end
