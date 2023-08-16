@@ -22,7 +22,7 @@ Buttons
   desc:Send the customer a reply
   on click:
     if (have multitasking)
-      yield 3 ticket
+      yield 5 ticket
     else
       yield 1 ticket
     end
@@ -56,8 +56,8 @@ Upgrades
   *multitasking
   name:Multitasking
   desc:Emails and phone calls at the same time; more than twice as efficient!
-  req:2500 ticket:earned
-  cost:2500 ticket
+  req:4000 ticket:earned
+  cost:1000 resolvedticket
 
 Shinies
   *queueattack
