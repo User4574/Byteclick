@@ -36,10 +36,11 @@ Buildings
     lose 1 ticket
     yield 1 resolvedticket
   end
-  req:have ticketresolution
+  req:ticketresolution
+  cost:40 ticket
 
 Upgrades
   *ticketresolution
   name:Ticket Resolution
   desc:Allows you to resolve tickets, solving problems! (Actual solution not included)
-  req:300 ticket:earned
+  req:1000 ticket:earned
